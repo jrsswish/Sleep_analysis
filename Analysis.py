@@ -12,9 +12,9 @@ def inputHandler(csvfile):
     sleep_category = []
     n = len(sleep)
     for i in range(n):
-        if sleep[i] < 5:
+        if sleep[i] <= 6:
             sleep_category.append("low")
-        elif sleep[i] > 5 and sleep[i] < 8:
+        elif sleep[i] > 6 and sleep[i] < 8:
             sleep_category.append("norm")
         elif sleep[i] > 8:
             sleep_category.append("high")
@@ -26,6 +26,15 @@ def inputHandler(csvfile):
     sns.boxplot(x='Sleep_Category', y='Stress_Level', data=df)
     plt.xlabel("Sleep Hours")
     plt.ylabel("Stress Level")
+    num_low = sum(1 for i in range(n) if sleep_category[i] == "low")
+    mean_low = (sum(stress[i] for i in range(n) if sleep_category[i] == "low"))/num_low
+    num_norm = sum(1 for i in range(n) if sleep_category[i] == "norm")
+    mean_norm = (sum(stress[i] for i in range(n) if sleep_category[i] == "norm"))/num_norm
+    num_high= sum(1 for i in range(n) if sleep_category[i] == "high")
+    mean_high = (sum(stress[i] for i in range(n) if sleep_category[i] == "high")) / num_high
+    print("Average Mean for low:", mean_low)
+    print("Average Mean for norm:", mean_norm)
+    print("Average Mean for high:", mean_high)
     plt.show()
 
 if __name__ == '__main__':
