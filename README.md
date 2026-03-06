@@ -13,3 +13,6 @@ From the boxplot I can conclude that the sleep hours do not contribute to the st
 Although I want to check the values to make sure
 
 **3rd step** : I computed the mean of each sleep category stress level.
+<img width="439" height="76" alt="image" src="https://github.com/user-attachments/assets/94bec550-8409-4d01-a6ae-b541d94850cb" />
+
+From this image we can conclude that there is not really a difference on each mean of each sleep category.
