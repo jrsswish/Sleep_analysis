@@ -45,7 +45,32 @@ def Occupation_Analysis(csvfile):
     plt.xlabel("Occupation")
     plt.ylabel("Stress Level")
     plt.show()
+
+
+def Daily_phone_hours_analysis(csvfile):
+    df = pd.read_csv(csvfile)
+    sleep = df['Sleep_Hours']
+    daily_phone_hours = df['Daily_Phone_Hours']
+    phone_hours_category = []
+    n = len(daily_phone_hours)
+    for i in range(n):
+        if daily_phone_hours[i] <= 6:
+            phone_hours_category.append("low")
+        elif daily_phone_hours[i] > 6 and daily_phone_hours[i] < 8:
+            phone_hours_category.append("norm")
+        elif daily_phone_hours[i] > 8:
+            phone_hours_category.append("high")
+        else:
+            phone_hours_category.append("NA")
+    df['Phone_Hours_Category'] = phone_hours_category
+    phone_hours = df.groupby('Phone_Hours_Category')['Sleep_Hours'].mean()
+    print(phone_hours)
+
+    sns.boxplot(x='Phone_Hours_Category', y='Sleep_Hours', data=df)
+    plt.xlabel("Daily Phone Hours Category")
+    plt.ylabel("Sleep Hours")
+    plt.show()
+
 if __name__ == '__main__':
     csvfile = sys.argv[1]
-    Sleep_Stress_Analysis(csvfile)
-    Occupation_Analysis(csvfile)
+    Daily_phone_hours_analysis(csvfile)
