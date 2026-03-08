@@ -22,3 +22,9 @@ From this image we can conclude that there is not really a difference on each me
 
 We can conclude that occupation do not have anything to do with stress level.
 
+**5th step**: We wanted to check if daily phone hours affects sleep hours from box plot,
+
+<img width="737" height="570" alt="image" src="https://github.com/user-attachments/assets/7c721abd-a4d0-4c32-a137-db32e6bc99a3" />
+
+We can conclude that daily phone hours do not affect sleep hours.
+
