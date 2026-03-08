@@ -28,3 +28,8 @@ We can conclude that occupation do not have anything to do with stress level.
 
 We can conclude that daily phone hours do not affect sleep hours.
 
+**6th step**: We wanted to check the stress level across the users using a distribution graph
+<img width="765" height="580" alt="image" src="https://github.com/user-attachments/assets/28361304-e0b6-4068-a82c-1165aeb7a74f" />
+
+We can condude that there are no patterns found from the distribution of stress level across the users
+
