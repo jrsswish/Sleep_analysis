@@ -18,7 +18,7 @@ Although I want to check the values to make sure
 From this image we can conclude that there is not really a difference on each mean of each sleep category.
 
 **4th step** : I computed if occupation has anything to do with stress level from the box plot graph we implemented. 
-![Uploading image.png…]()
+<img width="746" height="567" alt="image" src="https://github.com/user-attachments/assets/a9903be0-07a9-4ba4-9efd-12dae230685a" />
 
 We can conclude that occupation do not have anything to do with stress level.
 
