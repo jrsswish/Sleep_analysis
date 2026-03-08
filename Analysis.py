@@ -71,6 +71,15 @@ def Daily_phone_hours_analysis(csvfile):
     plt.ylabel("Sleep Hours")
     plt.show()
 
+def stress_distribution_analysis(csvfile):
+    df = pd.read_csv(csvfile)
+    stress = df['Stress_Level']
+    sns.histplot(stress, kde=True)
+    plt.title("Stress Level Distribution Across Users")
+    plt.xlabel("Stress Level")
+    plt.ylabel("Count")
+    plt.show()
+
 if __name__ == '__main__':
     csvfile = sys.argv[1]
-    Daily_phone_hours_analysis(csvfile)
+    stress_analysis(csvfile)
